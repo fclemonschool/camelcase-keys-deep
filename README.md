@@ -1,17 +1,19 @@
-# camelcase-keys-deep
+# camelcase-keys-deep2
 
 > Deeply convert the keys of an object to camelCase
 
 ## Install
 
 ```
-$ npm install --save camelcase-keys-deep
+$ npm install --save camelcase-keys-deep2
+or
+$ yarn add camelcase-keys-deep2
 ```
 
 ## Usage
 
 ```js
-const camelcaseKeysDeep = require('camelcase-keys-deep');
+const camelcaseKeysDeep = require('camelcase-keys-deep2');
 
 camelcaseKeysDeep({unicorn_rainbow: {foo_bar: 1}});
 //=> {unicornRainbow: {fooBar: 1}}
@@ -19,7 +21,7 @@ camelcaseKeysDeep({unicorn_rainbow: {foo_bar: 1}});
 
 ## API
 
-### camelcaseKeysDeep(input)
+### camelcaseKeysDeep2(input)
 
 #### input
 

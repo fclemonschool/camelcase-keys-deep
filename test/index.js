@@ -1,12 +1,10 @@
-var expect = require("chai").expect;
-var camelcaseKeysDeep = require("../index");
+import {expect} from "chai";
+import camelcaseKeysDeep from '../index.js'
 
-describe("camelcaseKeysDeep", function() {
-  var extract;
-
-  it("should deeply camelcase the keys of a JSON object", function() {
-    var aDate = new Date(2016, 3, 15);
-    var json = {
+describe("camelcaseKeysDeep", () => {
+  it("should deeply camelcase the keys of a JSON object", () => {
+    const aDate = new Date(2016, 3, 15);
+    const json = {
       unicorn_rainbow: {
         foo_bar: 1,
         a_date: aDate,
@@ -22,14 +20,14 @@ describe("camelcaseKeysDeep", function() {
     });
   });
 
-  it("should raise if camelcased key would overwrite existing key of the JSON object", function() {
-    var json = {unicorn_rainbow: {foo_bar: 1, fooBar: 2}};
+  it("should raise if camelcased key would overwrite existing key of the JSON object", () => {
+    let json = {unicorn_rainbow: {foo_bar: 1, fooBar: 2}};
     expect(function() {
       camelcaseKeysDeep(json);
     }).to.throw();
 
     json = {foo: 1}
-    expect(function() {
+    expect(() => {
       camelcaseKeysDeep(json);
     }).to.not.throw();
   });
