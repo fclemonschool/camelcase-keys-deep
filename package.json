@@ -37,7 +37,7 @@
   ],
   "type": "module",
   "dependencies": {
-    "camelcase": "^6.3.0",
+    "camelcase": "^7.0.0",
     "map-obj": "^5.0.0"
   },
   "devDependencies": {
